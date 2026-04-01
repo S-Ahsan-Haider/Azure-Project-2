@@ -1,0 +1,26 @@
+- Have also installed gunicorn library here
+- Gunicorn (short for Green Unicorn) is a Python WSGI HTTP server 
+  used to run Python web applications in production. 
+  It acts as a bridge between your Python app (Flask, Django, FastAPI, etc.) 
+  and the web server, handling requests efficiently with multiple worker processes.
+
+- While making and pushing the repository to GitHub (Azure-Project-2), made following changes: 
+  1. Git Ignore: Select the Python template from the dropdown (INSTEAD OF NONE). 
+     This automatically ignores __pycache__ and other junk for you!
+  2. License: Select MIT License (INSTEAD OF NONE). This is a standard "open source" 
+     professional touch that says, "I'm happy for others to learn from my code."
+
+- from sklearn.compose import ColumnTransformer
+  Purpose: It allows you to apply different preprocessing steps (like scaling, encoding, 
+  normalization) to different columns of your dataset within a single pipeline.
+  
+  preprocessor = ColumnTransformer(
+    transformers=[
+        ('num', StandardScaler(), ['age', 'income']),
+        ('cat', OneHotEncoder(), ['gender', 'city'])
+        ]
+    )
+
+- Windows Paths: Always use r'path\to\file' for Windows paths. Sometimes a \n or \t in a folder 
+  name can confuse Python into thinking you're typing a "newline" or "tab."
+  df = pd.read_csv(r'D:\Code Related Files\loan_dataset_azure_train.csv')
