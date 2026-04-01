@@ -48,3 +48,5 @@ with open('loan_model.pkl', 'wb') as f:
     pkl.dump(pipe, f)
 
 print("Preprocessing done, model trained and saved!")
+
+#
